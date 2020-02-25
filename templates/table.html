@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<table style="width: 100%; transform: rotateX(0deg); border: 1px solid black;">
+    <tr style="border: 1px solid black;border-collapse: collapse;">
+        <th>MINIMUM TEMPERATURE</th>
+        <th>MEAN TEMPERATURE</th>
+        <th>MAXIMUM TEMPERATURE</th>
+        <th>TOTAL PRECIPITATION</th>
+        <th>VISIBILITY</th>
+        <th>SNOW DEPTH</th>
+        <th>MEAN WIND SPEED</th>
+        <th>MAXIMUM SUSTAINED WIND SPEED</th>
+        <th>MAXIMUM WIND GUST</th>
+        <th>URL</th>
+    </tr>
+    {% for dat in data %}
+    <tr style="border: 1px solid black;border-collapse: collapse;">
+        <td>{{ dat[0] }}</td>
+        <td>{{ dat[1] }}</td>
+        <td>{{ dat[2] }}</td>
+        <td>{{ dat[3] }}</td>
+        <td>{{ dat[4] }}</td>
+        <td>{{ dat[5] }}</td>
+        <td>{{ dat[6] }}</td>
+        <td>{{ dat[7] }}</td>
+        <td>{{ dat[8] }}</td>
+        <td>{{ dat[9] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
